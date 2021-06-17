@@ -1,9 +1,11 @@
 from database.user import User
+from database import *
 
 class Database:
 	def __init__(self):
 		self.users = {}
 		self.active = {}
+		self.version = 0.2
 
 	
 	def addUser(self, username, password):
@@ -22,11 +24,17 @@ class Database:
 			return False
 
 
+	def checkPassword(self, username, password):
+		if self.isExist(username):
+			user = self.getUser(username)
+			return user.password == password
+
+
 	def setOnline(self, username):
 		if self.isExist(username):
 			if self.active[username]:
 				del self.active[username]
-			elif not self.active[username]:
+			else:
 				self.active[username] = self.users[username]
 
 

@@ -25,7 +25,7 @@ class Inventory:
 			return False
 
 
-	def getItem(self, slot):
+	def getSlot(self, slot):
 		return self.inv[slot]
 
 

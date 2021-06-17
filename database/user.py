@@ -3,7 +3,6 @@ class User:
 		self.userdata = {}
 		self.userdata["username"] = username
 		self.userdata["password"] = password
-		self.userdata["id"] = None
 		self.userdata["loggedIn"] = False
 
 
@@ -12,10 +11,6 @@ class User:
 			self.userdata["loggedIn"] = False
 		else:
 			self.userdata["loggedIn"] = True
-
-
-	def setId(self, id):
-		self.userdata["id"] = id
 
 
 	def setUsername(self, username):
@@ -32,10 +27,6 @@ class User:
 
 	def getPassword(self):
 		return self.userdata["password"]
-
-	
-	def getId(self):
-		return self.userdata["id"]
 
 	
 	def getLoggedIn(self):

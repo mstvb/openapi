@@ -1,12 +1,11 @@
 [tool.poetry]
-name = "1705"
+name = "OpenAPI"
 version = "0.1.0"
 description = ""
-authors = ["Your Name <you@example.com>"]
+authors = ["Manuel Staufer <manuel.staufervb@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
-location = "^0.0.7"
 
 [tool.poetry.dev-dependencies]
 
