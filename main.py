@@ -31,9 +31,6 @@ class JLoader:
 
 
 if __name__ == "__main__":
-	t = StateTemplate(True, None, None)
-	t.start()
-	t.stop()
 	j = JLoader('version.json')	
 	print(f"OpenAPI: {j.getValue('version')}")
 	print(f"Developed by: {j.getValue('developer')}")
