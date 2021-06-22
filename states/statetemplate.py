@@ -11,13 +11,13 @@ class StateTemplate:
 		if isinstance(start_function, types.FunctionType):
 			self.start_function = start_function
 		else:
-			self.start_function = lambda: print(f"{self.name} start function")
+			self.start_function = 0
 
 
 		if isinstance(stop_function, types.FunctionType):
 			self.stop_function = stop_function
 		else:
-			self.stop_function = lambda: print(f"{self.name} stop function")
+			self.stop_function = 0
 
 
 	def start(self):
