@@ -14,7 +14,8 @@ class StateLoader:
 	def setState(self, stateName):
 		if stateName in self.states:
 			self.current_state = self.states[stateName]
-			self.current_state.start()
+			if type(self.current_state) == type(int):
+				self.current_state.start()
 
 
 	
